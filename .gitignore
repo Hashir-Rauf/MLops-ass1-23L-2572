@@ -1,0 +1,22 @@
+# Data and model artifacts (never version-controlled in MLOps)
+data/
+model/
+*.pkl
+*.h5
+*.joblib
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+.ipynb_checkpoints/
