@@ -32,7 +32,7 @@ def build_features(df):
 
     df["Rate"] = pd.to_numeric(df["Rate"], errors="coerce")
     df = df.dropna(subset=["Date Changed", "Rate"]).sort_values("Date Changed")
-
+    df["Rate"] = (df["Rate"] - df["Rate"].min()) / (df["Rate"].max() - df["Rate"].min())
     df["year"] = df["Date Changed"].dt.year
     df["month"] = df["Date Changed"].dt.month
     df["day"] = df["Date Changed"].dt.day
